@@ -15,6 +15,7 @@ CharityToken (CHRT) is an ERC20-based smart contract built on Ethereum, allowing
 - **Minting Tokens**: The contract owner can mint new tokens to increase the total supply.
 - **Burning Tokens**: Any token holder can burn tokens, reducing the total supply.
 - **View Charities and Donors**: Both charities and donors can view their records of donations and receipts.
+- **Transfering Tokens**: Desired amount of tokens can be transfered and the totalSupply will reflect the remaining tokens.
 
 This project provides a secure and efficient way to manage donations through blockchain technology.
 ## Getting Started 
