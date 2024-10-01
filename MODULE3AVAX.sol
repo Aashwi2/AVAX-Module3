@@ -77,4 +77,17 @@ contract CharityToken is ERC20 {
         _burn(msg.sender, _amount);
     }
 
+    function transferTokens(address _to, uint _amount) external {
+    require(balanceOf(msg.sender) >= _amount, "Insufficient token balance");
+    require(_to != address(0), "Cannot transfer to zero address");
+
+    // Define a burn ratio or amount that needs to be burnt after transfer.
+    uint burnAmount = _amount; 
+    uint transferAmount = _amount - burnAmount;
+
+    _transfer(msg.sender, _to, transferAmount);
+    
+    _burn(msg.sender, burnAmount);
+}
+
 }
